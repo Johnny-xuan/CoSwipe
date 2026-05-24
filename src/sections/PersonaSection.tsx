@@ -43,19 +43,19 @@ const toneStyle: Record<SceneTone, {
 
 const personaFrames = [
   {
-    image: '/李然用户画像/1.png',
+    image: '/persona/1.png',
     label: '白天',
     title: '品牌电商运营',
     body: '看数据、改页面、盯素材、写活动文案。身体一直坐着，脑子一直在线。',
   },
   {
-    image: '/李然用户画像/2.png',
+    image: '/persona/2.png',
     label: '晚上',
     title: '躺床刷视频',
     body: '她不是来完成任务的，只是想让生活轻一点：想出去、想舒服、想少费点劲。',
   },
   {
-    image: '/李然用户画像/3.png',
+    image: '/persona/3.png',
     label: '被接住',
     title: 'CoSwipe 看见了这些信号',
     body: '周边游、肩颈、工位调整不再只是兴趣标签，而是一次可以被回应的状态。',
@@ -66,8 +66,8 @@ const scenes = [
   {
     id: 'trip',
     no: '01',
-    comicImage: '/李然真实体验/吐槽的连环画.jpg',
-    cardImage: '/李然真实体验/吐槽.png',
+    comicImage: '/scenes/mirror-comic.jpg',
+    cardImage: '/scenes/mirror-card.png',
     window: '周边游窗口',
     mode: '吐槽',
     posture: '朋友式点破',
@@ -86,8 +86,8 @@ const scenes = [
   {
     id: 'neck',
     no: '02',
-    comicImage: '/李然真实体验/直击的连环画.jpg',
-    cardImage: '/李然真实体验/直击.png',
+    comicImage: '/scenes/direct-comic.jpg',
+    cardImage: '/scenes/direct-card.png',
     window: '靠背 / 肩颈窗口',
     mode: '直击',
     posture: '朋友式直说',
@@ -106,8 +106,8 @@ const scenes = [
   {
     id: 'desk',
     no: '03',
-    comicImage: '/李然真实体验/挑战连环画.jpg',
-    cardImage: '/李然真实体验/挑战.png',
+    comicImage: '/scenes/challenge-comic.jpg',
+    cardImage: '/scenes/challenge-card.png',
     window: '工位自检窗口',
     mode: '挑战',
     posture: '朋友式邀请',
