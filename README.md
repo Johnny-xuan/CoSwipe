@@ -1,10 +1,18 @@
 # CoSwipe · 信息流里的 AI 陪刷好友
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-johnny--xuan.github.io%2FCoSwipe-22c55e?style=for-the-badge&logo=githubpages&logoColor=white)](https://johnny-xuan.github.io/CoSwipe/)
+[![Deploy](https://img.shields.io/github/actions/workflow/status/Johnny-xuan/CoSwipe/deploy.yml?branch=main&style=for-the-badge&label=Deploy&logo=github)](https://github.com/Johnny-xuan/CoSwipe/actions)
+[![Stack](https://img.shields.io/badge/Vite%208-React%2019-646cff?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev)
+
 > 抖音 AI 创变者计划 2026 · 黑客松联赛「中国科学技术大学站」· 赛道一参赛作品
 
 CoSwipe 是一个嵌入短视频信息流的 **AI 陪刷决策系统**。它不是替你刷，而是陪你刷——读懂你刚刚的停留、收藏、搜索、划走，在被刷到的那一刻，像朋友一样接住你。
 
-**在线预览**：https://johnny-xuan.github.io/CoSwipe/
+## 🌐 在线 Demo
+
+**👉 [https://johnny-xuan.github.io/CoSwipe/](https://johnny-xuan.github.io/CoSwipe/)**
+
+> 桌面端浏览体验最佳。每次推送 `main` 分支后约 1-2 分钟自动重新部署。
 
 ## 三种陪刷模式
 
