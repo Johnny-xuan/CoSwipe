@@ -15,8 +15,12 @@ export function IntroSection() {
           </p>
           {/* CoSwipe 产品标志：Boldonse 字体 + 金属流光，醒目放大 */}
           <h2
-            className="text-chrome animate-shimmer-bg text-[clamp(3.4rem,9vw,7rem)] leading-none tracking-tight"
-            style={{ fontFamily: 'var(--font-display)' }}
+            className="text-neon animate-shimmer-bg text-[clamp(3rem,8vw,6.2rem)] leading-none"
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontWeight: 700,
+              letterSpacing: '0.02em',
+            }}
           >
             CoSwipe
           </h2>

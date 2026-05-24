@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Boldonse&family=Caveat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Caveat:wght@400;700&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/cn-fontsource-smiley-sans-1.1-bold/font.css");
 @import "tailwindcss";
 
@@ -36,7 +36,7 @@
   --color-soft-white: #f8fafc;
 
   /* Fonts */
-  --font-display: "Boldonse", "Smiley Sans", "PingFang SC", sans-serif;
+  --font-display: "Chakra Petch", "Smiley Sans", "PingFang SC", sans-serif;
   --font-cn-display: "Smiley Sans", "PingFang SC", "Hiragino Sans GB", sans-serif;
   --font-handwrite: "Caveat", "PingFang SC", cursive;
   --font-body: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, sans-serif;
@@ -135,6 +135,24 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   filter: drop-shadow(0 0 35px rgba(205, 168, 122, 0.25));
+}
+
+/* === Cyberpunk Neon wordmark：青-紫-粉霓虹渐变 + 多重发光 === */
+.text-neon {
+  background: linear-gradient(125deg,
+    #67e8f9 0%,
+    #4dd0e1 22%,
+    #a855f7 52%,
+    #ec4899 82%,
+    #f472b6 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter:
+    drop-shadow(0 0 14px rgba(77, 208, 225, 0.45))
+    drop-shadow(0 0 28px rgba(168, 85, 247, 0.4))
+    drop-shadow(0 0 42px rgba(236, 72, 153, 0.35));
 }
 
 /* === Grain overlay === */
