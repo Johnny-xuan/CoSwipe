@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Boldonse&family=Caveat:wght@400;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/cn-fontsource-smiley-sans-1.1-bold/font.css");
+@import "tailwindcss";
+
+/* === Fonts === */
+
+@theme {
+  /* === 抖音深色基调（保留兼容旧的 phone demo 组件）=== */
+  --color-douyin-bg: #000000;
+  --color-douyin-bg-soft: #161616;
+  --color-douyin-text: #ffffff;
+  --color-douyin-text-dim: rgba(255, 255, 255, 0.6);
+  --color-douyin-divider: rgba(255, 255, 255, 0.08);
+  --color-douyin-accent: #fe2c55;
+  --color-profile-gradient-from: #4a90e2;
+  --color-profile-gradient-to: #7eb6f6;
+
+  /* === CoSwipe Pitch Website === */
+  /* Cosmic 深空 */
+  --color-cosmic-void: #09080e;
+  --color-cosmic-deep: #040406;
+  --color-cosmic-mid: #14131a;
+  --color-cosmic-glow: #1f1d26;
+
+  /* 三模式色彩 (静奢砂金钛银陶土) */
+  --color-mirror-pink: #cda87a;
+  --color-mirror-glow: #dfc7a7;
+  --color-direct-cyan: #8a9bb4;
+  --color-direct-glow: #b0c4de;
+  --color-challenge-orange: #c27c59;
+  --color-challenge-glow: #e2a688;
+
+  /* 系统层 */
+  --color-router-purple: #5a657c;
+  --color-router-indigo: #434c5e;
+  --color-soft-white: #f8fafc;
+
+  /* Fonts */
+  --font-display: "Boldonse", "Smiley Sans", "PingFang SC", sans-serif;
+  --font-cn-display: "Smiley Sans", "PingFang SC", "Hiragino Sans GB", sans-serif;
+  --font-handwrite: "Caveat", "PingFang SC", cursive;
+  --font-body: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, sans-serif;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #050217;
+  color: white;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* 隐藏滚动条 */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* === 动画工具 === */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.025); }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes float-up {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.8; }
+  100% { transform: translateY(-100vh) translateX(20px); opacity: 0; }
+}
+@keyframes shimmer-bg {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px currentColor, 0 0 40px currentColor; opacity: 1; }
+  50% { box-shadow: 0 0 35px currentColor, 0 0 70px currentColor; opacity: 0.85; }
+}
+@keyframes flow-dash {
+  to { stroke-dashoffset: -200; }
+}
+@keyframes silent-scroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+@keyframes signal-fade {
+  0%, 100% { opacity: 0.18; transform: translateY(10px) scale(0.96); }
+  38%, 62% { opacity: 0.74; transform: translateY(0) scale(1); }
+}
+@keyframes soft-pulse {
+  0%, 100% { opacity: 0.58; }
+  50% { opacity: 1; }
+}
+@keyframes chip-drift {
+  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.34; }
+  50% { transform: translate3d(34px, -18px, 0); opacity: 0.72; }
+}
+@keyframes charm-wiggle {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-3px) rotate(2deg); }
+}
+
+.animate-breathe { animation: breathe 4s ease-in-out infinite; }
+.animate-spin-slow { animation: spin-slow 40s linear infinite; }
+.animate-spin-slower { animation: spin-slow 60s linear infinite reverse; }
+.animate-shimmer-bg { animation: shimmer-bg 6s ease-in-out infinite; background-size: 200% 100%; }
+.animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+.animate-flow-dash { animation: flow-dash 4s linear infinite; }
+.animate-silent-scroll { animation: silent-scroll 45s linear infinite; }
+.animate-signal-fade { animation: signal-fade 6s ease-in-out infinite; }
+.animate-soft-pulse { animation: soft-pulse 3.6s ease-in-out infinite; }
+.animate-chip-drift { animation: chip-drift 7s ease-in-out infinite; }
+.animate-charm-wiggle { animation: charm-wiggle 3.4s ease-in-out infinite; }
+
+/* === Chrome / Metallic 文字 === */
+.text-chrome {
+  background: linear-gradient(180deg,
+    #ffffff 0%,
+    #dfc7a7 40%,
+    #cda87a 70%,
+    #8a9bb4 100%);
+  background-size: 100% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 35px rgba(205, 168, 122, 0.25));
+}
+
+/* === Grain overlay === */
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  mix-blend-mode: overlay;
+  z-index: 1;
+}
+
+/* === Cosmic 渐变 mesh === */
+.bg-cosmic-mesh {
+  background:
+    radial-gradient(at 15% 18%, rgba(205, 168, 122, 0.12) 0%, transparent 45%),
+    radial-gradient(at 88% 25%, rgba(138, 155, 180, 0.1) 0%, transparent 45%),
+    radial-gradient(at 30% 90%, rgba(194, 124, 89, 0.08) 0%, transparent 45%),
+    radial-gradient(at 78% 78%, rgba(90, 101, 124, 0.06) 0%, transparent 45%),
+    linear-gradient(180deg, #09080e 0%, #040406 40%, #09080e 100%);
+}
+
+.bg-cosmic-pink {
+  background:
+    radial-gradient(at 30% 30%, rgba(205, 168, 122, 0.25) 0%, transparent 50%),
+    radial-gradient(at 70% 70%, rgba(90, 101, 124, 0.15) 0%, transparent 50%),
+    linear-gradient(180deg, #100f0a 0%, #1a160d 100%);
+}
+.bg-cosmic-cyan {
+  background:
+    radial-gradient(at 30% 30%, rgba(138, 155, 180, 0.25) 0%, transparent 50%),
+    radial-gradient(at 70% 70%, rgba(90, 101, 124, 0.15) 0%, transparent 50%),
+    linear-gradient(180deg, #0a0c10 0%, #13161c 100%);
+}
+.bg-cosmic-orange {
+  background:
+    radial-gradient(at 30% 30%, rgba(194, 124, 89, 0.25) 0%, transparent 50%),
+    radial-gradient(at 70% 70%, rgba(205, 168, 122, 0.12) 0%, transparent 50%),
+    linear-gradient(180deg, #120e0c 0%, #1e1511 100%);
+}
+
+/* === Glow utilities === */
+.glow-mirror { box-shadow: 0 0 45px rgba(205, 168, 122, 0.15), 0 0 90px rgba(205, 168, 122, 0.06); }
+.glow-direct { box-shadow: 0 0 45px rgba(138, 155, 180, 0.12), 0 0 90px rgba(138, 155, 180, 0.05); }
+.glow-challenge { box-shadow: 0 0 45px rgba(194, 124, 89, 0.12), 0 0 90px rgba(194, 124, 89, 0.05); }
+.glow-router { box-shadow: 0 0 45px rgba(90, 101, 124, 0.1), 0 0 90px rgba(90, 101, 124, 0.04); }
+
+.drop-glow-mirror { filter: drop-shadow(0 0 20px rgba(205, 168, 122, 0.2)); }
+.drop-glow-direct { filter: drop-shadow(0 0 20px rgba(138, 155, 180, 0.15)); }
+.drop-glow-challenge { filter: drop-shadow(0 0 20px rgba(194, 124, 89, 0.15)); }
+.drop-glow-router { filter: drop-shadow(0 0 20px rgba(90, 101, 124, 0.15)); }
+
+/* === Stroke-dash flow === */
+.flow-line {
+  stroke-dasharray: 8 4;
+  animation: flow-dash 3s linear infinite;
+}
+
+/* === Cinematic & Polaroid Special Styles === */
+.polaroid-frame {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  padding-bottom: 32px;
+  border-radius: 20px;
+}
+
+.film-text-glow {
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+@keyframes water-ripple {
+  0% {
+    filter: blur(0px) contrast(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    filter: blur(8px) contrast(0.8);
+    transform: scale(0.98);
+    opacity: 0.5;
+  }
+  100% {
+    filter: blur(0px) contrast(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-water-dissolve {
+  animation: water-ripple 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Custom background for polaroid neon halos */
+.bg-polaroid-halo {
+  position: absolute;
+  inset: -10%;
+  filter: blur(60px);
+  opacity: 0.15;
+  pointer-events: none;
+  border-radius: 50%;
+  mix-blend-mode: plus-lighter;
+}
