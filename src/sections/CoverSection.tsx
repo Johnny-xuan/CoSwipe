@@ -25,15 +25,18 @@ export function CoverSection({ onEnter }: { onEnter: () => void }) {
           <p className="mb-6 text-xs font-bold uppercase tracking-[0.42em] text-white/30">
             Silent Feed · 沉默的信息流
           </p>
-          <h1 className="font-cn-display text-[clamp(2.4rem,5.5vw,5rem)] font-black leading-[1.1] tracking-normal text-white/94">
-            它一直在
-            <span className="text-mirror-pink">猜你</span>。
+          <h1 className="font-cn-display text-[clamp(1.9rem,4vw,3.6rem)] font-black leading-[1.2] tracking-normal text-white/94">
+            推荐系统一直在<span className="text-mirror-pink">猜你</span>，
+            <br />
+            但你只能用<span className="text-white">几个按钮</span>回应它。
           </h1>
-          <div className="mt-8 max-w-xl space-y-3 text-[clamp(1rem,1.6vw,1.3rem)] leading-relaxed text-white/62">
-            <p>你停在哪条、收藏了什么、又划走了什么——它全看见了，越猜越准。</p>
-            <p>而你能回应的，只有点赞、评论、分享、搜索这几个固定动作。</p>
+          <div className="mt-8 max-w-xl space-y-3 text-[clamp(0.98rem,1.5vw,1.2rem)] leading-relaxed text-white/60">
+            <p>
+              点赞、收藏、评论、转发，能告诉系统你
+              <span className="text-white/82">可能喜欢什么</span>，
+            </p>
             <p className="font-bold text-white/90">
-              可这几个按钮，说不清你此刻到底想要什么。
+              却很难说清你为什么停下、此刻什么状态、真正想解决什么。
             </p>
           </div>
 
@@ -52,7 +55,7 @@ export function CoverSection({ onEnter }: { onEnter: () => void }) {
         <div className="flex flex-col items-center">
           <RecommendationTrap />
           <p className="mt-6 max-w-sm text-center text-sm leading-relaxed text-white/50">
-            它的内容千变万化，<span className="text-white/80">你的回应只有那几个固定按钮。</span>
+            它能猜你喜欢什么，<span className="text-white/80">却接不住你此刻的状态。</span>
           </p>
         </div>
       </div>
